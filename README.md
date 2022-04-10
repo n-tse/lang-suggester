@@ -8,7 +8,7 @@
 
 * _HTML_
 * _CSS_
-* _BootStrap
+* _BootStrap_
 * _JavaScript_
 * _jQuery_
 
