@@ -11,6 +11,10 @@ function totalValue (ans1, ans2, ans3, ans4) {
   return totValue;
 }
 
+function quizResult (result) {
+  return "Based on your responses, the first programming language you should learn is " + result;
+}
+
 $(document).ready(function() {
   $("form#lang-questionnaire").submit(function(event) {
     event.preventDefault();
@@ -19,7 +23,7 @@ $(document).ready(function() {
     const hogwartsHouse = $("input#hogwartsHouse").val());
     const pineapplePizza = $("input:radio[name=pineapplePizza]:checked").val();
     const wouldRather = $("input:radio[name=wouldRather]:checked").val();
-    const totValue = (programmingInterest, techUsage, answerValue(pineapplePizza), answerValue(wouldRather));
+    const totValue = totalValue(programmingInterest, techUsage, answerValue(pineapplePizza), answerValue(wouldRather));
     let result;
     if (hogwartsHouse === "Slytherin") {
       result = quizResult("Python");
@@ -32,5 +36,6 @@ $(document).ready(function() {
     } else {
       result = quizResult("C#")
     }
+    $("#output").text(result);
   });
 }); 
