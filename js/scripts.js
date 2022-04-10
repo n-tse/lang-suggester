@@ -1,3 +1,16 @@
+function answerValue (answer) {
+  if (answer === "yes" || "noSleep") {
+    return 0;
+  } else {
+    return 2;
+  }
+}
+
+function totalValue (ans1, ans2, ans3, ans4) {
+  let totValue = ans1 + ans2 + ans3 + ans4;
+  return totValue;
+}
+
 $(document).ready(function() {
   $("form#lang-questionnaire").submit(function(event) {
     event.preventDefault();
@@ -6,9 +19,18 @@ $(document).ready(function() {
     const hogwartsHouse = $("input#hogwartsHouse").val());
     const pineapplePizza = $("input:radio[name=pineapplePizza]:checked").val();
     const wouldRather = $("input:radio[name=wouldRather]:checked").val();
+    const totValue = (programmingInterest, techUsage, answerValue(pineapplePizza), answerValue(wouldRather));
     let result;
     if (hogwartsHouse === "Slytherin") {
-      result = langResult("Slytherin");
-    } 
+      result = quizResult("Python");
+    } else if (totValue <= 2) {
+      result = quizResult("JavaScript"); 
+    } else if (totValue <= 4) {
+      result = quizResult("Python");
+    } else if (totValue <=7) {
+      result = quizResult("SQL");
+    } else {
+      result = quizResult("C#")
+    }
   });
 }); 
