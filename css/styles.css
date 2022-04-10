@@ -2,9 +2,16 @@
   display: none;
   padding: 15px;
 }
+
+h1 {
+  font-weight: bold;
+  font-family: 'Lucida Calligraphy';
+}
+
 label {
   padding: 5px;
 }
+
 body {
   background-image: linear-gradient(to bottom right, cyan, beige);
   padding: 30px;

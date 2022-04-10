@@ -17,7 +17,7 @@ $(document).ready(function() {
     const userName = $("input#userName").val();
     const programmingInterest = parseInt($("#programmingInterest").val());
     const techUsage = parseInt($("#techUsage").val());
-    const hogwartsHouse = $("input#hogwartsHouse").val();
+    const hogwartsHouse = $("select#hogwartsHouse").val();
     const pineapplePizza = $("input:radio[name=pineapplePizza]:checked").val();
     const wouldRather = $("input:radio[name=wouldRather]:checked").val();
     const totValue = totalValue(programmingInterest, techUsage, answerValue(pineapplePizza), answerValue(wouldRather));
