@@ -1,5 +1,5 @@
 function answerValue (answer) {
-  if (answer === "yes" || "noSleep") {
+  if (answer === "yes" || answer === "noSleep") {
     return 0;
   } else {
     return 2;
