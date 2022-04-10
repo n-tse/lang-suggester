@@ -11,13 +11,10 @@ function totalValue (ans1, ans2, ans3, ans4) {
   return totValue;
 }
 
-function quizResult (result) {
-  return "Based on your responses, the first programming language you should learn is " + result;
-}
-
 $(document).ready(function() {
   $("form#lang-questionnaire").submit(function(event) {
     event.preventDefault();
+    const userName = $("input#userName").val();
     const programmingInterest = parseInt($("#programmingInterest").val());
     const techUsage = parseInt($("#techUsage").val());
     const hogwartsHouse = $("input#hogwartsHouse").val();
@@ -37,6 +34,7 @@ $(document).ready(function() {
       result = "C#";
     }
 
+    $(".userName").text(userName);
     $(".showQuizResult").text(result);
     $("#output").show();
   });

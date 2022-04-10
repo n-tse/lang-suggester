@@ -13,8 +13,11 @@
     <p>If you're interested in learning how to code, you've come to the right place! Take the short quiz below and we'll suggest which programming language you should start learning first.</p>
 
     <form id="lang-questionnaire">
-      <label for="userName">What is your first name?</label>
-      <input id="userName" type="text">
+      <div class="form-group">
+        <label for="userName">What is your first name?</label>
+        <input id="userName" class="form-control" type="text">
+      </div>
+      
       <label for="programmingInterest">Which of these are you most interested in?</label>
       <select class="form-control" id="programmingInterest">
         <option value="0">Web development</option>
@@ -62,10 +65,10 @@
           Need no food and water
         </label>
       </div>
-      <button type="submit" class="btn">Get Results!</button>
+      <button type="submit" class="btn-primary">Get Results!</button>
     </form>
     <div id="output">
-      <p>Based on your responses, the first programming language you should learn is <span class="showQuizResult"></span></p>
+      <p>Thanks for completing the questionnaire, <span class="userName"></span>. Based on your responses, the first programming language you should learn is <span class="showQuizResult"></span></p>
     </div>
   </div>
 </body>
