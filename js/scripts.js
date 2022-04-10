@@ -20,22 +20,24 @@ $(document).ready(function() {
     event.preventDefault();
     const programmingInterest = parseInt($("#programmingInterest").val());
     const techUsage = parseInt($("#techUsage").val());
-    const hogwartsHouse = $("input#hogwartsHouse").val());
+    const hogwartsHouse = $("input#hogwartsHouse").val();
     const pineapplePizza = $("input:radio[name=pineapplePizza]:checked").val();
     const wouldRather = $("input:radio[name=wouldRather]:checked").val();
     const totValue = totalValue(programmingInterest, techUsage, answerValue(pineapplePizza), answerValue(wouldRather));
     let result;
     if (hogwartsHouse === "Slytherin") {
-      result = quizResult("Python");
+      result = "Python";
     } else if (totValue <= 2) {
-      result = quizResult("JavaScript"); 
+      result = "JavaScript"; 
     } else if (totValue <= 4) {
-      result = quizResult("Python");
+      result = "Python";
     } else if (totValue <=7) {
-      result = quizResult("SQL");
+      result = "SQL";
     } else {
-      result = quizResult("C#")
+      result = "C#";
     }
-    $("#output").text(result);
+
+    $(".showQuizResult").text(result);
+    $("#output").show();
   });
 }); 
